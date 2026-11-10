@@ -1,0 +1,77 @@
+# AdShield blocklist — one domain per line (hosts-file format also accepted).
+# A listed domain also blocks all of its subdomains.
+
+# ---------- Google ads ----------
+doubleclick.net              # ad serving (incl. googleads.g.doubleclick.net)
+googlesyndication.com        # AdSense / pagead2 / tpc
+googleadservices.com         # ad clicks & conversion tracking
+googletagservices.com        # Google Publisher Tag
+adservice.google.com
+adservice.google.co.in
+adservice.google.co.uk
+adservice.google.de
+adservice.google.fr
+adservice.google.ca
+adservice.google.com.au
+adservice.google.com.br
+adservice.google.co.jp
+2mdn.net                     # DoubleClick rich-media creatives
+admob.com                    # in-app ads (AdMob)
+googleads.g.doubleclick.net
+pagead2.googlesyndication.com
+afs.googlesyndication.com
+imasdk.googleapis.com        # video ad SDK (IMA) — remove if some app's video player breaks
+dai.google.com               # dynamic ad insertion
+
+# ---------- Google ad tracking ----------
+google-analytics.com
+ssl.google-analytics.com
+app-measurement.com          # Firebase/AdMob analytics
+googletagmanager.com
+
+# ---------- Meta (Facebook / Instagram) ads ----------
+an.facebook.com              # Meta Audience Network (ads inside other apps)
+pixel.facebook.com           # Meta Pixel
+analytics.facebook.com
+ad.facebook.com
+# connect.facebook.net       # Pixel/SDK script — uncomment to block, but it breaks "Log in with Facebook" on websites
+
+# ---------- Mobile game ad SDKs (most in-game ads come from these) ----------
+# Note: "watch an ad for a reward" buttons will stop giving rewards.
+unityads.unity3d.com         # Unity Ads (does NOT block Unity game services)
+applovin.com                 # AppLovin / MAX
+applvn.com                   # AppLovin ad creatives
+supersonicads.com            # ironSource
+ironsrc.mobi                 # ironSource
+vungle.com                   # Vungle / Liftoff
+chartboost.com
+adcolony.com
+mintegral.com
+mintegral.net
+pangle.io                    # Pangle (ByteDance / TikTok ads)
+pangolin-sdk-toutiao.com
+inmobi.com
+tapjoy.com
+tapjoyads.com
+inner-active.mobi            # Fyber / Digital Turbine
+smaato.net
+startappservice.com
+
+# ---------- Big programmatic ad exchanges (apps & websites) ----------
+amazon-adsystem.com          # Amazon display ads (not Prime Video's own ads)
+adnxs.com                    # Xandr / AppNexus
+criteo.com
+criteo.net
+taboola.com
+outbrain.com
+pubmatic.com
+rubiconproject.com
+openx.net
+adsrvr.org                   # The Trade Desk
+moatads.com
+casalemedia.com
+
+# ---------- Spotify (partial: removes banner ads & ad tracking; audio ads usually still play) ----------
+adeventtracker.spotify.com
+ads-fa.spotify.com
+analytics.spotify.com
