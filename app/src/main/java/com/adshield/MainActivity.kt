@@ -43,8 +43,9 @@ class MainActivity : Activity() {
         val root = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER_HORIZONTAL
-            setPadding(pad, pad * 3, pad, pad)
+            setPadding(pad, pad, pad, pad)
         }
+        val title = TextView(this).apply { text = "AdShield"; textSize = 26f; gravity = Gravity.CENTER; setPadding(0, pad, 0, pad) }
         status = TextView(this).apply { textSize = 18f; gravity = Gravity.CENTER }
         toggle = Button(this).apply { setOnClickListener { onToggle() } }
         val browser = Button(this).apply {
@@ -71,8 +72,8 @@ class MainActivity : Activity() {
                 "3. Set Settings > Network > Private DNS to Off or Automatic " +
                 "(a custom Private DNS hostname bypasses the blocker)."
         }
-        listOf(status, toggle, browser, listsButton, battery, alwaysOn, help).forEach(root::addView)
-        setContentView(ScrollView(this).apply { addView(root) })
+        listOf(title, status, toggle, browser, listsButton, battery, alwaysOn, help).forEach(root::addView)
+        setContentView(ScrollView(this).apply { fitsSystemWindows = true; addView(root) })
 
         if (Build.VERSION.SDK_INT >= 33) {
             requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 2)
